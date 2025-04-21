@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>株式会社若松屋様 ECマーケティング戦略レポート概要</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Noto Sans JP primarily, fallback to Inter */
+        body {
+            font-family: 'Noto Sans JP', 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light background for contrast */
+        }
+        /* Custom styles for visual elements */
+        .report-card {
+            background-color: white;
+            border-radius: 12px; /* Rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Soft shadow */
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-left: 6px solid; /* Color accent border */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .report-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        }
+        .card-title {
+            font-size: 1.5rem; /* 24px */
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        .card-icon {
+            width: 2rem; /* 32px */
+            height: 2rem; /* 32px */
+            margin-right: 0.75rem; /* 12px */
+            color: #4A5568; /* Gray-700 */
+        }
+        .section-divider {
+            border-top: 2px dashed #CBD5E0; /* Gray-400 */
+            margin: 3rem 0;
+        }
+        .highlight-box {
+            background-color: #EBF8FF; /* Light Blue-100 */
+            border: 1px solid #90CDF4; /* Blue-300 */
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+        .highlight-box strong {
+            color: #2B6CB0; /* Blue-700 */
+        }
+        /* Specific border colors for sections */
+        .border-blue-500 { border-left-color: #4299E1; }
+        .border-green-500 { border-left-color: #48BB78; }
+        .border-yellow-500 { border-left-color: #ECC94B; }
+        .border-purple-500 { border-left-color: #9F7AEA; }
+        .border-red-500 { border-left-color: #F56565; }
+        .border-teal-500 { border-left-color: #38B2AC; }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Style for navigation */
+        .main-nav {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            padding: 0.75rem 1.5rem; /* 12px 24px */
+            margin-bottom: 2rem; /* Space below nav */
+        }
+        .main-nav ul {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            justify-content: center; /* Center items */
+            gap: 1rem; /* Space between items */
+        }
+        .main-nav a {
+            text-decoration: none;
+            color: #4A5568; /* Gray-700 */
+            font-weight: 600;
+            padding: 0.5rem 0.75rem; /* 8px 12px */
+            border-radius: 6px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .main-nav a:hover {
+            background-color: #E2E8F0; /* Gray-200 */
+            color: #2D3748; /* Gray-800 */
+        }
+
+        /* Add more spacing for list items */
+        .report-card ul li, .report-card ol li {
+            margin-bottom: 0.5rem; /* Add space below each list item */
+        }
+        .report-card ul ul li, .report-card ol ol li {
+             margin-bottom: 0.25rem; /* Less space for nested items */
+        }
+
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <div class="container mx-auto px-4 py-8 max-w-5xl">
+
+        <header class="mb-6 text-center"> <h1 class="text-4xl font-bold text-gray-900 mb-2">株式会社若松屋様</h1>
+            <h2 class="text-2xl font-semibold text-blue-700">ECサイト新規集客強化 マーケティング戦略概要</h2>
+            <p class="text-gray-600 mt-2">調査結果と戦略提案のポイント</p>
+        </header>
+
+        <nav class="main-nav" aria-label="レポートセクションナビゲーション">
+            <ul>
+                <li><a href="#summary">サマリー</a></li>
+                <li><a href="#overview">事業概要</a></li>
+                <li><a href="#market">市場動向</a></li>
+                <li><a href="#competitors">競合環境</a></li>
+                <li><a href="#strategy">戦略方針</a></li>
+                <li><a href="#marketing">施策</a></li>
+                <li><a href="#roadmap">ロードマップ</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+            <section id="summary" class="report-card border-blue-500">
+                <h3 class="card-title">
+                    <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                    エグゼクティブサマリー
+                </h3>
+                <p class="mb-4">本レポートは、若松屋様のEC（自社EC、Amazon、BASE等）における新規顧客獲得強化を目的とした調査・戦略提案です。玩具花火・煙火等の総合商社として、特に環境配慮型のエコパッケージや煙の少ない花火といった独自製品が強みです。しかし、オンライン販売チャネルが分散し、積極的な広告実績がない点が課題となっています。</p>
+                <p class="mb-4">国内市場はコロナ禍で家庭用需要が増加したものの、少子化や遊び場の制約といった構造的課題を抱え、競合も激化しています。</p>
+                <div class="highlight-box">
+                    <strong>推奨戦略：</strong> 若松屋様の強みを活かし、持続的な新規顧客獲得を目指します。
+                    <ul class="list-disc list-inside ml-4 mt-2 space-y-1 text-gray-700">
+                        <li><strong>独自製品活用：</strong> エコ・低煙製品を軸に、環境意識層や住宅密集地の利用者をターゲットに。</li>
+                        <li><strong>チャネル役割明確化：</strong> 自社ECを独自製品販売・顧客関係構築の拠点とし、マーケットプレイスはリーチ拡大の補完と位置付け。</li>
+                        <li><strong>ターゲットSEO/MEO：</strong> 独自製品や関連課題（例：「煙少ない 花火」）での検索順位向上、地域認知度向上。</li>
+                        <li><strong>段階的広告導入：</strong> 測定可能なディスプレイ広告を小規模から開始し、効果検証に基づき最適化・拡大。自社ECへの誘導を優先。</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="overview" class="report-card border-green-500">
+                <h3 class="card-title">
+                    <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h2.24M2.36 21V11.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75V21M4.11 21V11.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75V21m7.5 0V6.75a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75v13.5m-4.5 0H9.36m11.14 0H18m0 0h2.24M9.36 21v-7.5a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75V21m-9 0h2.24M5.64 3.86a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-.75.75H6.39a.75.75 0 0 1-.75-.75V3.86Z" /></svg>
+                    事業概要とオンラインチャネル評価
+                </h3>
+                <p class="mb-4">愛知県西尾市拠点の玩具花火、煙火、雑貨等の総合商社。卸売事業も展開。独自性の高い製品群が競争優位性の源泉です。</p>
+                <p class="mb-4"><strong>独自製品スポットライト：</strong></p>
+                <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700 mb-4">
+                    <li><strong>エコパッケージ (EPシリーズ):</strong> クラフト紙使用、過剰包装削減。ゴミ減、利便性向上。環境配慮と価値提供を両立 (例: EP-06は本数20%増)。</li>
+                    <li><strong>「けむり少なめ」シリーズ:</strong> 住宅密集地や煙が気になる場所での利用を想定。</li>
+                    <li><strong>「増量大作戦」シリーズ:</strong> 資材費抑制で本数を増やし、コスパ重視層に訴求。</li>
+                    <li><strong>BASE限定商品:</strong> 例：「けむり少なめメガ盛り 5個セット」（ローソク、固めてポイ同梱）。自社ECへの誘導策。</li>
+                    <li><strong>花火便利アイテム:</strong> 虫よけキャンドル、「はなび固めてポイ」等で利便性向上、クロスセル機会創出。</li>
+                </ul>
+                 <p class="mb-4"><strong>現在のEコマースチャネル：</strong></p>
+                 <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700 mb-4">
+                    <li><strong>自社EC (wakamatsuya.official.ec on BASE):</strong> D2C拠点。独自・限定品中心。送料条件: ¥15,000以上無料 (一部¥10,000)。後払い対応。</li>
+                    <li><strong>Amazon:</strong> 第三者小売業者経由での販売が目立つ。リーチは大きいが、ブランド管理・価格設定・データ取得は限定的。</li>
+                    <li><strong>BASEプラットフォーム:</strong> 自社EC基盤。他事業者が若松屋製品を販売するケースも。</li>
+                    <li><strong>その他 (楽天, Yahoo!):</strong> 多くが第三者経由。Amazon同様、リーチ拡大チャネルだがコントロールは間接的。</li>
+                </ul>
+                 <div class="highlight-box">
+                    <strong>課題：</strong>
+                    <ul class="list-disc list-inside ml-4 mt-2 space-y-1 text-gray-700">
+                        <li>チャネル分散によるブランドイメージ統一、価格競争、顧客関係構築の難しさ。</li>
+                        <li>自社ECの送料無料閾値（¥15,000）が競合比で高く、少額購入のハードルになる可能性。利便性重視層がマーケットプレイスに流れるリスク。</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <section id="market" class="report-card border-yellow-500">
+                    <h3 class="card-title">
+                        <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" /></svg>
+                        市場と消費者動向
+                    </h3>
+                    <p class="mb-4"><strong>市場ダイナミクス：</strong> 打ち上げ花火市場はコロナ禍で大打撃（売上半減）、回復途上。玩具花火は巣ごもり需要で一時活性化（庭先向けセット等）したが、長期的には少子化、他娯楽との競合、遊び場減少、原材料輸入依存（価格高騰・規制リスク）等の構造課題あり。2023年以降イベント再開で回復傾向。</p>
+                    <p class="mb-4"><strong>グローバルトレンド：</strong> 手持ち花火市場は成長予測。安全性向上、環境配慮型（グリーン花火）、オンライン販売拡大がトレンド。若松屋のエコ・低煙製品はこれに合致。</p>
+                    <p class="mb-4"><strong>消費者行動：</strong></p>
+                    <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700 mb-4">
+                        <li><strong>購入動機：</strong> 夏の行事、家族・友人との交流（BBQ、キャンプ）、記念日、イベント、娯楽、ノスタルジー。「トキ消費」回帰。</li>
+                        <li><strong>購入時期：</strong> 夏休みピークだが、GW、春秋キャンプシーズン、通年需要も（ドン・キホーテ等）。</li>
+                        <li><strong>情報収集：</strong> オンライン検索、ECモール（レビュー・ランキング）、SNS、口コミ、アプリ（例：若松屋「Hanabi-Navi」）。</li>
+                        <li><strong>オンライン重視点：</strong> 品揃え、価格比較容易さ、迅速配送、通年購入可能性。</li>
+                        <li><strong>購入障壁：</strong> 安全性懸念、煙・音（近隣配慮）、利用場所不明。若松屋の低煙製品や「Hanabi-Navi」はこれらの解決策となり得る。</li>
+                        <li><strong>ニッチ需要：</strong> キャンプ、BBQ、小規模祝い事など、ショルダーシーズンや特定シーン向け需要も存在。</li>
+                    </ul>
+                </section>
+
+                <section id="competitors" class="report-card border-red-500">
+                    <h3 class="card-title">
+                        <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 11.667 0l3.181-3.183m-4.991 0-3.182-3.182a4.5 4.5 0 0 0-6.364 0l-3.182 3.182" /></svg>
+                        競合環境 (オンライン)
+                    </h3>
+                    <p class="mb-4"><strong>主要競合カテゴリー：</strong></p>
+                     <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700 mb-4">
+                        <li><strong>専門オンライン小売：</strong> 花火の虎（品揃え、即日発送、イベントセット）、e-hanabiya（卸売価格、品揃え）、HanabiStoreなど。強力なD2Cブランド。</li>
+                        <li><strong>大手総合オンライン小売：</strong> Amazon, 楽天, Yahoo!（集客力、利便性、レビュー）。トイザらス、ドン・キホーテもオンライン展開。</li>
+                        <li><strong>製造業者：</strong> マルモ、オンダ、井上玩具煙火など（製品は流通するが、多くはB2B主軸でD2C注力度低めか）。</li>
+                    </ul>
+                     <p class="mb-4"><strong>競合戦略：</strong> 幅広い品揃え、価格競争力（卸売背景、セット割）、利便性（迅速配送）、特定ニーズ対応製品（国産、キャラ、低煙）、マーケットプレイス出品＋自社EC運営、SEO、SNS活用。</p>
+                    <p class="mb-4"><strong>若松屋のオンラインSWOT分析：</strong></p>
+                     <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                        <li><strong>強み(S):</strong> 独自製品（エコ、低煙）、確立されたブランド（B2B中心か）、多角事業、「Hanabi-Navi」アプリ。</li>
+                        <li><strong>弱み(W):</strong> チャネル分散・管理複雑、自社EC送料条件、広告経験不足、輸入品依存リスク、B2Cオンライン認知度。</li>
+                        <li><strong>機会(O):</strong> 独自製品軸マーケ、自社EC強化・CRM、アプリ活用、広告導入、ニッチ市場開拓。</li>
+                        <li><strong>脅威(T):</strong> 価格競争・埋没リスク、専門店の存在、輸入品リスク（価格、供給、品質）、規制変更可能性。</li>
+                    </ul>
+                     <div class="highlight-box">
+                        <strong>示唆：</strong> 品揃えや価格、利便性のみでの勝負は困難。独自製品の「問題解決能力」を前面に出し、差別化を図ることが重要。
+                    </div>
+                </section>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <section id="strategy" class="report-card border-purple-500">
+                <h3 class="card-title">
+                    <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" /></svg>
+                    戦略方針 (STP) とターゲットペルソナ
+                </h3>
+                <p class="mb-4"><strong>市場細分化（セグメンテーション）：</strong></p>
+                <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700 mb-4">
+                    <li><strong>人口動態：</strong> 家族層、若年層、イベント企画者など。</li>
+                    <li><strong>心理的変数：</strong> 環境意識層、安全・安心志向層、体験重視層、価格重視層、品質・伝統志向層など。</li>
+                    <li><strong>行動変数：</strong> 利用機会（夏休み、キャンプ等）、利用頻度、チャネル選好、求める便益（価格、独自性、低煙等）。</li>
+                    <li><strong>地理的変数：</strong> 都市部（低煙ニーズ高）、郊外・地方。</li>
+                </ul>
+                 <p class="mb-4"><strong>推奨ターゲットセグメント：</strong> 若松屋の強み（独自製品）が活きる層。</p>
+                 <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700 mb-4">
+                    <li><strong>ターゲット1：エココンシャス・ファミリー</strong> (例: 佐藤恵子 38歳)
+                        <ul class="list-circle list-inside ml-6 text-sm">
+                            <li>特徴: 環境・安全に関心が高い子育て家庭。</li>
+                            <li>ニーズ: 環境負荷が少なく安全、後片付けが楽な花火。</li>
+                            <li>親和性: エコパッケージ、安全情報、「はなび固めてポイ」に共感。価値観合えば価格許容。</li>
+                            <li>情報収集: 口コミ、育児サイト、Instagram、ECレビュー。「子供 花火 安全」「エコ 花火」等で検索。</li>
+                        </ul>
+                    </li>
+                     <li><strong>ターゲット2：配慮型アーバンユーザー</strong> (例: 田中健二 29歳)
+                        <ul class="list-circle list-inside ml-6 text-sm">
+                            <li>特徴: 都市部在住、近隣配慮（煙・音）重視。利便性・オンライン情報収集を好む。</li>
+                            <li>ニーズ: 低煙・低騒音、限られたスペースで使いやすい花火。利用場所情報も求める。</li>
+                            <li>親和性: 「けむり少なめ」シリーズに関心。「Hanabi-Navi」アプリの利便性も評価。</li>
+                            <li>情報収集: Google検索（「煙少ない 花火」「花火 通販 すぐ届く」）、ECサイト、アプリストア。「Hanabi-Navi」に関心持つ可能性。</li>
+                        </ul>
+                    </li>
+                    <li>(オプション) ターゲット3：小規模イベントオーガナイザー</li>
+                 </ul>
+                 <p class="mb-4"><strong>ポジショニング戦略案：</strong></p>
+                 <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                    <li><strong>コンセプト：</strong> 「現代の消費者に寄り添う、思慮深い花火プロバイダー」</li>
+                    <li><strong>コアメッセージ：</strong> 「若松屋の革新的なソリューションで、もっと気軽に、もっと責任ある花火体験を。」</li>
+                    <li><strong>差別化軸：</strong> 独自製品（エコ、低煙）、課題解決（ゴミ、煙、コスパ）、情報提供（Hanabi-Navi、安全情報）、自社EC体験（送料見直し検討含む）。</li>
+                 </ul>
+                 <div class="highlight-box">
+                    <strong>ポイント：</strong> 品揃えや価格だけでなく、「責任ある楽しみ方」「課題解決」という現代的価値観で差別化を図る。
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <section id="marketing" class="report-card border-teal-500">
+                 <h3 class="card-title">
+                    <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" /></svg>
+                    デジタルマーケティング施策
+                </h3>
+                <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2 text-teal-700">SEO & MEO 戦略</h4>
+                        <p class="mb-2"><strong>キーワード戦略：</strong></p>
+                        <ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700 mb-4">
+                            <li>一般KW（花火 通販）、課題解決KW（煙少ない 花火）、ブランドKW、製品KW（エコパッケージ花火）、地域KW（花火 西尾市）、利用シーンKW（キャンプ 花火）を分析・優先順位付け。</li>
+                            <li>特に「課題解決」「製品」KWはコンバージョン期待大。</li>
+                        </ul>
+                        <p class="mb-2"><strong>オンページ・テクニカルSEO：</strong></p>
+                         <ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700 mb-4">
+                            <li>自社EC：商品名・説明文へのKW組込、高品質画像・動画、速度・モバイル最適化、構造化データ実装。</li>
+                            <li>コーポレートサイト：サイト構造整理、情報コンテンツ（安全、エコ等）作成・最適化、ECへの内部リンク。</li>
+                            <li>LP（広告用）：広告との関連性、速度、明確なCTA。</li>
+                        </ul>
+                         <p class="mb-2"><strong>コンテンツ・オフページ戦略：</strong></p>
+                         <ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700 mb-4">
+                            <li>ブログ等で役立つ記事（エコな選び方、煙対策、安全な遊び方、アプリ活用法）を定期作成・公開。ワークショップ情報も活用。</li>
+                            <li>関連外部サイト（地域、キャンプ、子育て等）からの被リンク獲得。SNSでのコンテンツ拡散。</li>
+                         </ul>
+                         <p class="mb-2"><strong>Amazon・BASE内 検索最適化：</strong></p>
+                         <ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700 mb-4">
+                             <li>Amazon：タイトル、説明文、箇条書き、バックエンドKW最適化。レビュー獲得奨励。高品質画像・動画、A+コンテンツ活用。</li>
+                             <li>BASE：商品名・説明文を分かりやすく記述。販促機能活用。</li>
+                         </ul>
+                         <p class="mb-2"><strong>MEO (Googleビジネスプロフィール)：</strong></p>
+                         <ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700">
+                            <li>GBP申請・最適化（正確な情報、写真、レビュー依頼、投稿機能活用）。NAP情報統一。</li>
+                            <li>地域での信頼性・存在感向上に貢献。</li>
+                         </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-2 text-teal-700">ディスプレイ広告戦略</h4>
+                         <p class="mb-2"><strong>目的とKPI：</strong></p>
+                         <ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700 mb-4">
+                            <li>主目的：質の高いトラフィックを適切な販売チャネル（自社EC優先）へ誘導し、新規顧客獲得・売上向上。</li>
+                            <li>副次目的：独自製品（エコ、低煙）のブランド認知度向上。</li>
+                            <li>KPI：効率性 (CTR, CPC)、成果 (CVR, CPA, ROAS)、影響 (トラフィック増、指名検索リフト)。</li>
+                         </ul>
+                         <p class="mb-2"><strong>ターゲットとプラットフォーム：</strong></p>
+                         <ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700 mb-4">
+                            <li>対象：ペルソナ、興味関心（キャンプ、アウトドア、環境配慮等）、デモグラ、リマーケティング（サイト訪問者、アプリ利用者）。</li>
+                            <li>媒体：GDN（広範リーチ、多様なターゲティング）、SNS広告（視覚的訴求、特定層リーチ、動画）、Amazon広告（Amazon売上増目的の場合、別途検討）。</li>
+                         </ul>
+                         <p class="mb-2"><strong>ランディングページ戦略：</strong></p>
+                         <ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700 mb-4">
+                            <li>独自製品販売促進 → 自社ECの関連製品/カテゴリページへ。</li>
+                            <li>汎用セット販売/Amazon売上拡大 → Amazonのブランド/製品ページへ（効果測定必須）。</li>
+                            <li>ブランド認知/アプリ利用促進 → コーポレートサイト解説ページ/アプリストアへ。</li>
+                            <li><strong>推奨：初期は自社EC誘導を最優先。</strong></li>
+                         </ul>
+                         <p class="mb-2"><strong>クリエイティブとメッセージング：</strong></p>
+                         <ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700 mb-4">
+                            <li>ビジュアル：高品質な使用シーン写真・動画（楽しさ、特徴、美しさ）。ペルソナが共感するライフスタイルイメージ。</li>
+                            <li>メッセージ：USP明確化（エコ、低煙、お得感）。製品ライン名訴求。明確なCTA。ターゲットに合わせた調整。</li>
+                         </ul>
+                        <p class="mb-2"><strong>予算と段階的展開：</strong></p>
+                         <ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700 mb-4">
+                            <li>少額テスト予算から開始。初期は1-2媒体、1-2キャンペーンに集中。</li>
+                            <li>フェーズ1(テスト学習)→フェーズ2(拡大最適化)→フェーズ3(維持拡張)。</li>
+                         </ul>
+                         <p class="mb-2"><strong>効果測定と最適化：</strong></p>
+                         <ul class="list-disc list-inside ml-4 space-y-1 text-sm text-gray-700">
+                            <li>広告媒体分析機能、Google Analytics（Eコマース計測）、コンバージョントラッキング（Pixel等）、UTMパラメータ活用。</li>
+                            <li>定期的レビューとデータに基づく調整（入札、予算、ターゲティング、クリエイティブ）。A/Bテスト実施。</li>
+                         </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="roadmap" class="report-card border-blue-500 mt-8">
+                <h3 class="card-title">
+                    <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" /></svg>
+                    統合ロードマップと結論
+                </h3>
+                <p class="mb-4"><strong>各デジタルチャネルの役割定義：</strong></p>
+                 <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700 mb-4">
+                    <li><strong>自社EC (BASE):</strong> 最重要コンバージョン拠点、独自製品販売、高利益率、顧客関係構築(CRM)基盤、広告受け皿。</li>
+                    <li><strong>Amazon/他マーケットプレイス:</strong> リーチ拡大・認知向上、利便性重視層獲得、汎用セット販売、社会的証明（レビュー）。</li>
+                    <li><strong>コーポレートサイト:</strong> ブランド構築・情報ハブ、信頼性向上、情報発信（安全、エコ）、SEOによる情報検索ユーザー獲得、EC/アプリ誘導。</li>
+                    <li><strong>Hanabi-Navi アプリ:</strong> ユーティリティ・エンゲージメントツール、便益提供、ブランドロイヤルティ向上、販促機会（プッシュ通知）、リマケ広告オーディエンスソース。</li>
+                    <li><strong>SEO:</strong> 持続的なオーガニック集客、質高いトラフィック誘導（独自製品・課題解決KW）、オンライン可視性向上。</li>
+                    <li><strong>MEO:</strong> 地域での信頼性向上、ローカル検索認知、B2B/地域連携支援。</li>
+                    <li><strong>ディスプレイ広告:</strong> 能動的なターゲットリーチ、特定ペルソナへのアプローチ、トラフィック誘導、独自製品認知向上、季節販促。</li>
+                    <li><strong>SNS (オーガニック):</strong> コミュニティ形成、視覚的訴求、顧客対話、UGC活用、各サイト/アプリ誘導。</li>
+                 </ul>
+                 <p class="mb-4"><strong>チャネル間の連携と相乗効果計画：</strong> メッセージ統一、リマーケティング連携、SEO⇔広告連携、アプリ⇔EC連携（アプリ推奨、限定クーポン等）、SNS⇔EC連携（キャンペーン、UGC活用）。</p>
+                <p class="mb-4"><strong>推奨される段階的実施計画：</strong></p>
+                <ol class="list-decimal list-inside ml-4 space-y-1 text-gray-700 mb-4">
+                    <li><strong>フェーズ1 (〜3ヶ月): 基盤構築</strong> - SEO基礎最適化、チャネル戦略再定義、ツール設定、テスト広告開始（独自製品→自社EC）、GBP最適化。</li>
+                    <li><strong>フェーズ2 (4〜9ヶ月): 成長加速</strong> - 効果的広告の予算拡大・最適化、リマケ本格導入、SEOコンテンツ作成開始、SNS発信強化、パフォーマンス分析と戦略調整（Amazon広告検討等）。</li>
+                    <li><strong>フェーズ3 (10ヶ月〜): 持続と拡大</strong> - 最適化広告の継続、新コンテンツ形式（動画等）検討、ターゲティング精度向上、市場・競合監視、アプリ統合強化。</li>
+                </ol>
+                 <div class="highlight-box">
+                    <strong>結論と最優先事項：</strong> 若松屋様は独自製品を強みにオンラインで成長可能。分散チャネル見直しと計画的デジタル戦略が不可欠。
+                    <ul class="list-disc list-inside ml-4 mt-2 space-y-1 text-gray-700">
+                        <li><strong>自社EC強化：</strong> 最重要拠点と位置づけ、送料条件見直し検討。コントロール、データ取得、利益率の観点から D2C モデル構築に注力。</li>
+                        <li><strong>独自製品中心マーケティング：</strong> エコ・低煙を軸に、課題解決を訴求。</li>
+                        <li><strong>段階的広告導入：</strong> 少額から始め、自社ECへ誘導、効果測定重視でリスク最小化・学習。</li>
+                        <li><strong>SEO基盤強化：</strong> 独自製品・課題解決キーワードで持続的集客。</li>
+                        <li><strong>Hanabi-Naviアプリ活用：</strong> マーケティングチャネルとして統合。</li>
+                    </ul>
+                     <p class="mt-2">データに基づいた意思決定を行いながら、段階的に施策を進化させることが成功の鍵です。</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="mt-12 pt-6 border-t border-gray-300 text-center text-sm text-gray-500">
+            <p>&copy; 2025 株式会社若松屋様 ECマーケティング戦略概要. All rights reserved.</p>
+            <p class="mt-1">このページは検索エンジンのインデックス対象外です。</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

@@ -14,7 +14,7 @@
         body {
             font-family: 'Inter', 'Noto Sans JP', sans-serif;
             background-color: #f7fafc; /* Light gray background */
-            padding-top: 4.5rem; /* Add padding for fixed navbar */
+            /* padding-top: 4.5rem; /* Remove body padding, handle spacing with margin below */
         }
         /* ナビゲーションバーのスタイル */
         nav {
@@ -25,6 +25,7 @@
             z-index: 50; /* Ensure navbar stays on top */
             background-color: white;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            height: 4.5rem; /* Explicit height for calculation */
         }
         nav a {
             transition: color 0.2s ease-in-out;
@@ -40,13 +41,10 @@
             border: 1px solid #e2e8f0; /* Light border */
             overflow: hidden; /* Ensure content stays within rounded corners */
             transition: transform 0.2s ease-in-out;
-            /* display: flex; - No longer needed for height consistency in 1 column */
-            /* flex-direction: column; */
         }
         .gr-card:hover {
             transform: translateY(-3px); /* Slight lift on hover */
         }
-        /* .gr-card > div { flex-grow: 1; } - No longer needed */
 
         /* グラレコ風のテーブルスタイル */
         .gr-table th, .gr-table td {
@@ -174,7 +172,7 @@
 <body class="p-4 md:p-8 lg:p-12">
 
     <nav class="p-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="max-w-6xl mx-auto flex justify-between items-center h-full">
             <div class="text-lg font-bold text-blue-600">
                 <svg class="icon inline-block w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                 AI生産性向上策
@@ -194,7 +192,8 @@
         </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto"> <div class="text-center mb-12">
+    <div class="max-w-4xl mx-auto mt-24">
+        <div class="text-center mb-12">
              <h1>
                 生成AIを使った生産性向上のアイデア
             </h1>
@@ -387,8 +386,8 @@
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    // Calculate position considering the fixed navbar height
-                    const navbarHeight = document.querySelector('nav').offsetHeight;
+                    // Calculate position considering the fixed navbar height (use value from CSS)
+                    const navbarHeight = 4.5 * 16; // 4.5rem * 16px/rem (default browser font size)
                     const elementPosition = targetElement.getBoundingClientRect().top;
                     const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - 20; // Added extra 20px offset
 

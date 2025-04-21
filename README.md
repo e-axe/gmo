@@ -1,1 +1,1 @@
-# gmo20250421-haruka
+# gmo

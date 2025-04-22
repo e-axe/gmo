@@ -8,74 +8,121 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Apply Inter font as default, M PLUS Rounded 1c for headings for a softer feel */
+        /* Apply Inter font as default, M PLUS Rounded 1c for headings */
         body {
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth; /* Enable smooth scrolling */
+            scroll-behavior: smooth;
+            background-color: #f9fafb; /* Slightly off-white background like example */
         }
         h1, h2, h3, h4, h5, h6 {
             font-family: 'M PLUS Rounded 1c', sans-serif;
-            font-weight: 700; /* Make headings bold */
+            font-weight: 700; /* Bold headings */
         }
-        /* Custom styles for graphic recording feel */
+        h2 {
+             display: flex;
+             align-items: center;
+             gap: 0.5rem; /* Space between icon and text */
+        }
+        /* Icon placeholder style */
+        .section-icon {
+            width: 1.25em; /* Adjust size as needed */
+            height: 1.25em;
+            display: inline-block;
+            vertical-align: middle;
+            fill: currentColor; /* Use text color */
+            flex-shrink: 0; /* Prevent icon from shrinking */
+        }
+
+        /* Updated section styling inspired by example */
         .section-card {
-            background-color: #f8fafc; /* Light gray background for sections */
-            border-left: 5px solid #3b82f6; /* Blue accent border */
-            padding: 1.5rem; /* p-6 */
-            margin-bottom: 2rem; /* mb-8 */
+            background-color: #ffffff; /* White background for sections */
+            border-top: 4px solid #2563eb; /* Blue top border like example */
+            padding: 2rem; /* Increased padding */
+            margin-bottom: 2.5rem; /* Increased margin */
             border-radius: 0.5rem; /* rounded-lg */
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); /* Subtle shadow */
         }
-        .nav-link {
-            transition: all 0.3s ease;
-            padding: 0.5rem 1rem; /* py-2 px-4 */
-            border-radius: 0.375rem; /* rounded-md */
-        }
-        .nav-link:hover {
-            background-color: #eff6ff; /* bg-blue-50 */
-            color: #1d4ed8; /* text-blue-700 */
-        }
-        /* Style for tables */
-        th, td {
-            border: 1px solid #e5e7eb; /* border-gray-200 */
-            padding: 0.75rem; /* p-3 */
-            text-align: left;
-        }
-        th {
-            background-color: #f3f4f6; /* bg-gray-100 */
-            font-weight: bold;
-        }
-        /* Sticky Navigation */
+        /* Navigation Bar Styling - Simplified */
         #navbar {
             position: sticky;
             top: 0;
             z-index: 50;
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-            backdrop-filter: blur(10px); /* Blur effect */
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque white */
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #e5e7eb; /* Subtle bottom border */
+            box-shadow: none; /* Remove previous shadow */
+        }
+         .nav-link {
+            transition: color 0.3s ease;
+            padding: 0.5rem 0; /* Remove horizontal padding, use margin/space-x instead */
+            border-radius: 0; /* Remove rounding */
+            border-bottom: 2px solid transparent; /* Prepare for hover effect */
+            color: #4b5563; /* Default gray */
+            font-weight: 500; /* Medium weight */
+            font-family: 'M PLUS Rounded 1c', sans-serif; /* Match heading font */
+        }
+        .nav-link:hover {
+            color: #1d4ed8; /* Blue text on hover */
+            border-bottom-color: #1d4ed8; /* Blue underline on hover */
+            background-color: transparent; /* No background change */
+        }
+        /* Table Styling - Cleaned up */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Use collapse for cleaner lines */
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        th, td {
+            border: 1px solid #e5e7eb; /* border-gray-200 */
+            padding: 0.75rem 1rem; /* Adjusted padding */
+            text-align: left;
+            vertical-align: top; /* Align content top */
+        }
+        th {
+            background-color: #f9fafb; /* Very light gray for header */
+            font-weight: 500; /* Medium weight header */
+             font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+        /* Persona Card Styling */
+        .persona-card {
+             background-color: #ffffff;
+             border: 1px solid #e5e7eb; /* Subtle border */
+             border-radius: 0.5rem; /* rounded-lg */
+             padding: 1.5rem; /* p-6 */
+             margin-bottom: 1.5rem; /* mb-6 */
+             box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* Very subtle shadow */
+        }
+        .persona-card h4 {
+             margin-bottom: 0.75rem; /* mb-3 */
+        }
+        /* Footer Styling */
+        footer {
+            background-color: #1f2937; /* Darker gray */
         }
     </style>
 </head>
-<body class="bg-white text-gray-800 leading-relaxed">
+<body class="bg-gray-50 text-gray-700 leading-relaxed">
 
-    <nav id="navbar" class="w-full shadow-md mb-8">
+    <nav id="navbar" class="w-full mb-10">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                    <span class="text-xl font-bold text-blue-600">若松屋レポート</span>
+                    <span class="text-2xl font-bold text-blue-600 font-['M_PLUS_Rounded_1c']">若松屋レポート</span>
                 </div>
                 <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#summary" class="nav-link text-gray-600 hover:text-blue-700">サマリー</a>
-                        <a href="#analysis" class="nav-link text-gray-600 hover:text-blue-700">現状分析</a>
-                        <a href="#audience" class="nav-link text-gray-600 hover:text-blue-700">ターゲット</a>
-                        <a href="#strategy" class="nav-link text-gray-600 hover:text-blue-700">広告戦略</a>
-                        <a href="#recommendations" class="nav-link text-gray-600 hover:text-blue-700">提言</a>
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#summary" class="nav-link">サマリー</a>
+                        <a href="#analysis" class="nav-link">現状分析</a>
+                        <a href="#audience" class="nav-link">ターゲット</a>
+                        <a href="#strategy" class="nav-link">広告戦略</a>
+                        <a href="#recommendations" class="nav-link">提言</a>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">メニューを開く</span>
                         <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -88,53 +135,59 @@
             </div>
         </div>
         <div class="md:hidden hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#summary" class="block nav-link text-gray-600 hover:text-blue-700">サマリー</a>
-                <a href="#analysis" class="block nav-link text-gray-600 hover:text-blue-700">現状分析</a>
-                <a href="#audience" class="block nav-link text-gray-600 hover:text-blue-700">ターゲット</a>
-                <a href="#strategy" class="block nav-link text-gray-600 hover:text-blue-700">広告戦略</a>
-                <a href="#recommendations" class="block nav-link text-gray-600 hover:text-blue-700">提言</a>
+             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200">
+                <a href="#summary" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50">サマリー</a>
+                <a href="#analysis" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50">現状分析</a>
+                <a href="#audience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50">ターゲット</a>
+                <a href="#strategy" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50">広告戦略</a>
+                <a href="#recommendations" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-700 hover:bg-blue-50">提言</a>
             </div>
         </div>
     </nav>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-4xl">
 
-        <header class="mb-12 text-center">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">株式会社若松屋 マーケティング調査レポート</h1>
-            <p class="text-lg text-gray-600">新規顧客獲得およびブランド認知度向上戦略</p>
+        <header class="mb-16 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">株式会社若松屋 マーケティング調査レポート</h1>
+            <p class="text-xl text-gray-500">新規顧客獲得およびブランド認知度向上戦略</p>
         </header>
 
         <section id="summary" class="section-card">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">エグゼクティブサマリー</h2>
-            <p class="mb-4">本レポートは、株式会社若松屋（以下、若松屋）の新規顧客獲得およびブランド認知度向上を目的としたマーケティング調査結果と戦略提案をまとめたものである。若松屋は1937年創業、1964年設立という長い歴史を持ち、玩具花火から打上花火、プライベート花火の企画・演出まで手掛ける総合商社としての地位を確立している。この歴史と専門性は、安全性への関心が高い花火市場において大きな信頼資産となる。一方で、オンライン販売チャネル（公式オンラインショップ）の機能性やユーザーエクスペリエンス、そして「若松屋」ブランド自体の認知度向上には課題が見られる。</p>
-            <p class="mb-4">主なターゲット層として、安全性を重視し家族で花火を楽しみたい「安全志向の親（30代後半女性、子供あり）」、イベントを盛り上げるために花火を利用する「イベントエンハンサー（20代若者）」、地域や学校行事などで信頼できる業者を探す「コミュニティイベント主催者（50代）」の3つのペルソナを提案する。</p>
-            <p>これらの課題解決とターゲット層への効果的なアプローチのため、YDA（Yahoo! JAPAN Ads ディスプレイ広告）、GDN（Google ディスプレイネットワーク）、LINE広告を活用した具体的なデジタル広告戦略を策定した。各プラットフォームの特性を活かし、デモグラフィック、興味関心、検索履歴、オーディエンスリストなどを組み合わせた詳細なターゲティング設定を行う。特に、若松屋の強みである「歴史と信頼性」「プライベート花火」「Hanabi-Naviアプリ」を訴求ポイントとし、各ペルソナのニーズに合わせた広告クリエイティブとメッセージを展開する。本戦略の実行により、オンラインでの新規顧客獲得と、若松屋ブランドの価値向上に貢献することを目指す。</p>
-             <small class="text-gray-500 block mt-2">注釈: レポート内の番号は参照元を示しますが、本文からは削除されています。</small>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">
+                 <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                エグゼクティブサマリー
+            </h2>
+            <p class="mb-4 text-base">本レポートは、株式会社若松屋（以下、若松屋）の新規顧客獲得およびブランド認知度向上を目的としたマーケティング調査結果と戦略提案をまとめたものである。若松屋は1937年創業、1964年設立という長い歴史を持ち、玩具花火から打上花火、プライベート花火の企画・演出まで手掛ける総合商社としての地位を確立している。この歴史と専門性は、安全性への関心が高い花火市場において大きな信頼資産となる。一方で、オンライン販売チャネル（公式オンラインショップ）の機能性やユーザーエクスペリエンス、そして「若松屋」ブランド自体の認知度向上には課題が見られる。</p>
+            <p class="mb-4 text-base">主なターゲット層として、安全性を重視し家族で花火を楽しみたい「安全志向の親（30代後半女性、子供あり）」、イベントを盛り上げるために花火を利用する「イベントエンハンサー（20代若者）」、地域や学校行事などで信頼できる業者を探す「コミュニティイベント主催者（50代）」の3つのペルソナを提案する。</p>
+            <p class="text-base">これらの課題解決とターゲット層への効果的なアプローチのため、YDA（Yahoo! JAPAN Ads ディスプレイ広告）、GDN（Google ディスプレイネットワーク）、LINE広告を活用した具体的なデジタル広告戦略を策定した。各プラットフォームの特性を活かし、デモグラフィック、興味関心、検索履歴、オーディエンスリストなどを組み合わせた詳細なターゲティング設定を行う。特に、若松屋の強みである「歴史と信頼性」「プライベート花火」「Hanabi-Naviアプリ」を訴求ポイントとし、各ペルソナのニーズに合わせた広告クリエイティブとメッセージを展開する。本戦略の実行により、オンラインでの新規顧客獲得と、若松屋ブランドの価値向上に貢献することを目指す。</p>
+             <small class="text-gray-500 block mt-4 text-xs">注釈: レポート内の番号は参照元を示しますが、本文からは削除されています。</small>
         </section>
 
         <section id="analysis" class="section-card">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">1. 現状分析：株式会社若松屋の市場ポジション</h2>
+             <h2 class="text-3xl font-bold text-gray-800 mb-8">
+                 <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.022 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" /></svg>
+                1. 現状分析：株式会社若松屋の市場ポジション
+            </h2>
 
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-3">1.1. 企業概要：歴史、事業範囲、ブランドアイデンティティ</h3>
-                <p class="mb-2"><strong>歴史的基盤:</strong> 1937年創業、1964年設立。80年以上の業歴は信頼性の基盤。安全性重視の市場で強み。</p>
-                <p class="mb-2"><strong>事業範囲 - 「総合商社」:</strong> 玩具花火、打上花火、プライベート花火、菓子・玩具、ワークショップ、企画・演出。多様なニーズ対応力と「花火専門」イメージ希薄化リスク。</p>
-                <p class="mb-2"><strong>ブランドメッセージ:</strong> 「さぁ、花火をしよう。」「花火のチカラ」「Only One HANABI」。参加、感動、独自性を喚起。「花火のチカラ」プロジェクトで社会貢献も。</p>
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">1.1. 企業概要：歴史、事業範囲、ブランドアイデンティティ</h3>
+                <p class="mb-3 text-base"><strong>歴史的基盤:</strong> 1937年創業、1964年設立。80年以上の業歴は信頼性の基盤。安全性重視の市場で強み。</p>
+                <p class="mb-3 text-base"><strong>事業範囲 - 「総合商社」:</strong> 玩具花火、打上花火、プライベート花火、菓子・玩具、ワークショップ、企画・演出。多様なニーズ対応力と「花火専門」イメージ希薄化リスク。</p>
+                <p class="mb-3 text-base"><strong>ブランドメッセージ:</strong> 「さぁ、花火をしよう。」「花火のチカラ」「Only One HANABI」。参加、感動、独自性を喚起。「花火のチカラ」プロジェクトで社会貢献も。</p>
             </div>
 
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-3">1.2. 製品ポートフォリオとオンラインチャネル評価</h3>
-                <p class="mb-2"><strong>製品ラインナップ:</strong> 手持ち、噴出、線香花火、打上花火、プライベート花火。エコパッケージ、低煙タイプ、セット商品も展開。</p>
-                <p class="mb-2"><strong>公式サイト (hanabi-wakamatsuya.co.jp):</strong> 企業情報中心。直接的なEコマース機能なし。</p>
-                <p class="mb-2"><strong>オンラインショップ (wakamatsuya.official.ec):</strong> BASE利用。玩具花火中心、価格帯500円～4,400円程度。シンプル構成だが検索/カテゴリ分類なし。利便性に課題。送料無料条件あり、決済情報不明瞭、配送制限あり。</p>
-                <p class="mb-2"><strong>Hanabi-Navi アプリ:</strong> 購入/遊戯場所検索、花火大会情報。消費者の「どこで安全に？」に応える。戦略的資産。</p>
-                <p class="italic text-gray-600">オンラインショップの機能不足は機会損失リスク。Hanabi-Naviアプリは顧客エンゲージメント向上の可能性。</p>
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">1.2. 製品ポートフォリオとオンラインチャネル評価</h3>
+                <p class="mb-3 text-base"><strong>製品ラインナップ:</strong> 手持ち、噴出、線香花火、打上花火、プライベート花火。エコパッケージ、低煙タイプ、セット商品も展開。</p>
+                <p class="mb-3 text-base"><strong>公式サイト (hanabi-wakamatsuya.co.jp):</strong> 企業情報中心。直接的なEコマース機能なし。</p>
+                <p class="mb-3 text-base"><strong>オンラインショップ (wakamatsuya.official.ec):</strong> BASE利用。玩具花火中心、価格帯500円～4,400円程度。シンプル構成だが検索/カテゴリ分類なし。利便性に課題。送料無料条件あり、決済情報不明瞭、配送制限あり。</p>
+                <p class="mb-3 text-base"><strong>Hanabi-Navi アプリ:</strong> 購入/遊戯場所検索、花火大会情報。消費者の「どこで安全に？」に応える。戦略的資産。</p>
+                <p class="italic text-gray-500 text-sm">オンラインショップの機能不足は機会損失リスク。Hanabi-Naviアプリは顧客エンゲージメント向上の可能性。</p>
             </div>
 
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-3">1.3. 確認された強み：歴史、専門性、提供価値の活用</h3>
-                <ul class="list-disc list-inside space-y-1 text-gray-700">
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">1.3. 確認された強み：歴史、専門性、提供価値の活用</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 text-base">
                     <li>深い業界専門知識と80年以上の歴史</li>
                     <li>包括的な製品ポートフォリオ（玩具～プライベート）</li>
                     <li>ユニークなサービス（プライベート花火、ワークショップ）</li>
@@ -143,34 +196,34 @@
                 </ul>
             </div>
 
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-3">1.4. 確認された弱みと市場課題：季節性、認知度、競争環境への対応</h3>
-                <ul class="list-disc list-inside space-y-1 text-gray-700">
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">1.4. 確認された弱みと市場課題：季節性、認知度、競争環境への対応</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 text-base">
                     <li>ブランド認知度の課題</li>
                     <li>最適化されていないオンライン販売チャネル</li>
                     <li>季節性（夏に需要集中）</li>
                     <li>競争市場（製造業者、卸、小売業者）</li>
                     <li>外部リスク（輸入依存、コスト変動、規制変更、市場変動）</li>
                 </ul>
-                 <p class="italic text-gray-600 mt-2">季節性対策: プライベート花火/ワークショップのオフシーズンプロモ。オンライン競争対策: EC改善または価値提案による差別化。</p>
+                 <p class="italic text-gray-500 mt-3 text-sm">季節性対策: プライベート花火/ワークショップのオフシーズンプロモ。オンライン競争対策: EC改善または価値提案による差別化。</p>
             </div>
 
             <div>
-                <h3 class="text-xl font-semibold text-gray-700 mb-3">1.5. SWOT分析サマリー</h3>
-                <div class="overflow-x-auto">
-                    <table class="min-w-full border border-gray-200 rounded-lg shadow">
-                        <thead class="bg-gray-100">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">1.5. SWOT分析サマリー</h3>
+                <div class="overflow-x-auto shadow border border-gray-200 rounded-lg">
+                    <table class="min-w-full">
+                        <thead class="bg-gray-50">
                             <tr>
-                                <th class="p-3 border-r"></th>
-                                <th class="p-3 text-green-600">強み (Strengths)</th>
-                                <th class="p-3 text-red-600">弱み (Weaknesses)</th>
+                                <th class="p-3 border-r border-gray-200 w-1/6"></th>
+                                <th class="p-3 text-green-700 w-2/5">強み (Strengths)</th>
+                                <th class="p-3 text-red-700 w-2/5">弱み (Weaknesses)</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr class="border-t">
-                                <td class="p-3 border-r font-semibold align-top">内部環境</td>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="p-3 border-r border-gray-200 font-semibold align-top bg-gray-50">内部環境</td>
                                 <td class="p-3 align-top">
-                                    <ul class="list-disc list-inside space-y-1">
+                                    <ul class="list-disc list-inside space-y-1 text-sm">
                                         <li>長い歴史と深い専門知識</li>
                                         <li>幅広い製品/サービス</li>
                                         <li>ユニークなサービス</li>
@@ -179,7 +232,7 @@
                                     </ul>
                                 </td>
                                 <td class="p-3 align-top">
-                                    <ul class="list-disc list-inside space-y-1">
+                                    <ul class="list-disc list-inside space-y-1 text-sm">
                                         <li>ブランド認知度の低さ</li>
                                         <li>オンラインショップのUX/機能不足</li>
                                         <li>需要の季節変動性</li>
@@ -187,15 +240,15 @@
                                     </ul>
                                 </td>
                             </tr>
-                            <tr class="border-t bg-gray-50">
-                                <th class="p-3 border-r"></th>
-                                <th class="p-3 text-blue-600">機会 (Opportunities)</th>
-                                <th class="p-3 text-orange-600">脅威 (Threats)</th>
+                            <tr class="bg-gray-50">
+                                <th class="p-3 border-r border-gray-200"></th>
+                                <th class="p-3 text-blue-700">機会 (Opportunities)</th>
+                                <th class="p-3 text-orange-700">脅威 (Threats)</th>
                             </tr>
-                            <tr class="border-t">
-                                <td class="p-3 border-r font-semibold align-top">外部環境</td>
+                             <tr class="bg-white">
+                                <td class="p-3 border-r border-gray-200 font-semibold align-top bg-gray-50">外部環境</td>
                                 <td class="p-3 align-top">
-                                    <ul class="list-disc list-inside space-y-1">
+                                    <ul class="list-disc list-inside space-y-1 text-sm">
                                         <li>デジタルマーケティングによるリーチ拡大</li>
                                         <li>Eコマース機能強化による直販増加</li>
                                         <li>オフシーズン向けプロモーション</li>
@@ -204,7 +257,7 @@
                                     </ul>
                                 </td>
                                 <td class="p-3 align-top">
-                                    <ul class="list-disc list-inside space-y-1">
+                                    <ul class="list-disc list-inside space-y-1 text-sm">
                                         <li>激しい市場競争</li>
                                         <li>景気変動による消費マインド低下</li>
                                         <li>規制変更のリスク</li>
@@ -216,16 +269,19 @@
                         </tbody>
                     </table>
                 </div>
-                 <p class="text-sm text-gray-600 mt-2">この分析は、強みを活かして機会を捉え、弱みを克服して脅威に対応するための戦略立案の基盤となります。</p>
+                 <p class="text-xs text-gray-500 mt-3">この分析は、強みを活かして機会を捉え、弱みを克服して脅威に対応するための戦略立案の基盤となります。</p>
             </div>
         </section>
 
         <section id="audience" class="section-card">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">2. ターゲットオーディエンス定義とペルソナ設定</h2>
+             <h2 class="text-3xl font-bold text-gray-800 mb-8">
+                 <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" /></svg>
+                2. ターゲットオーディエンス定義とペルソナ設定
+            </h2>
 
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-3">2.1. 主要市場セグメントの定義</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">2.1. 主要市場セグメントの定義</h3>
+                <ul class="list-disc list-inside space-y-3 text-gray-700 text-base">
                     <li><strong>子供を持つファミリー層:</strong> 安全性、楽しさ、思い出作り重視。玩具花火に関心。オンライン/アプリ利用可能性。</li>
                     <li><strong>若者・ソーシャルグループ:</strong> イベント（BBQ、キャンプ等）の盛り上げ目的。見栄え、楽しさ重視。オンライン/小売店で購入。</li>
                     <li><strong>イベント主催者（地域・企業・個人）:</strong> 祭り、学校行事、企業イベント、結婚式等。打上/プライベートショーのニーズ。信頼性、安全性、実行力重視。公式サイト/直接問い合わせ。</li>
@@ -233,90 +289,93 @@
                 </ul>
             </div>
 
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-3">2.2. 詳細ペルソナプロフィール</h3>
-                <div class="mb-4 p-4 border rounded-lg bg-white">
-                    <h4 class="text-lg font-semibold text-blue-700 mb-2">ペルソナ1：安全志向の親（カズミさん、38歳）</h4>
-                    <p><strong>デモグラフィック:</strong> 30代後半女性、既婚、子2人(6,9歳)、郊外在住、世帯収入平均以上。</p>
-                    <p><strong>ニーズ:</strong> 子供との楽しい夏の思い出、安全性、使いやすさ、信頼品質、煙少なめ、手軽な購入。</p>
-                    <p><strong>ペインポイント:</strong> 事故/火傷の心配、安全な場所不明、後片付け、選びにくさ。</p>
-                    <p><strong>情報源:</strong> 育児ブログ/雑誌、口コミ、検索(安全, 子供向け)、LINE、オンラインストア、Hanabi-Naviアプリ。</p>
-                    <p><strong>アプローチ:</strong> 安全認証、低煙/エコ、ファミリーセット、アプリ有用性強調。育児関心ターゲティング(YDA/GDN/LINE)。</p>
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">2.2. 詳細ペルソナプロフィール</h3>
+                <div class="persona-card">
+                    <h4 class="text-xl font-semibold text-blue-700">ペルソナ1：安全志向の親（カズミさん、38歳）</h4>
+                    <p class="text-sm text-gray-600 mb-2"><strong>デモグラフィック:</strong> 30代後半女性、既婚、子2人(6,9歳)、郊外在住、世帯収入平均以上。</p>
+                    <p class="text-sm text-gray-600 mb-2"><strong>ニーズ:</strong> 子供との楽しい夏の思い出、安全性、使いやすさ、信頼品質、煙少なめ、手軽な購入。</p>
+                    <p class="text-sm text-gray-600 mb-2"><strong>ペインポイント:</strong> 事故/火傷の心配、安全な場所不明、後片付け、選びにくさ。</p>
+                    <p class="text-sm text-gray-600 mb-2"><strong>情報源:</strong> 育児ブログ/雑誌、口コミ、検索(安全, 子供向け)、LINE、オンラインストア、Hanabi-Naviアプリ。</p>
+                    <p class="text-sm text-gray-600"><strong>アプローチ:</strong> 安全認証、低煙/エコ、ファミリーセット、アプリ有用性強調。育児関心ターゲティング(YDA/GDN/LINE)。</p>
                 </div>
-                <div class="mb-4 p-4 border rounded-lg bg-white">
-                    <h4 class="text-lg font-semibold text-green-700 mb-2">ペルソナ2：ソーシャルイベントエンハンサー（ケンジさん、24歳）</h4>
-                    <p><strong>デモグラフィック:</strong> 20代前半男性、学生/若手社会人、独身/交際中、都市部在住。</p>
-                    <p><strong>ニーズ:</strong> 集まり(BBQ等)の盛り上げ、記憶に残る体験、派手さ、楽しさ、手軽な購入/使用。</p>
-                    <p><strong>ペインポイント:</strong> 子供っぽさ回避、規制/場所不明、予算意識（インパクト重視）、購入不便。</p>
-                    <p><strong>情報源:</strong> SNS(Insta/TikTok)、友人推薦、検索(安い, 面白い, BBQ)、LINE、店舗/オンライン衝動買い。</p>
-                    <p><strong>アプローチ:</strong> 視覚的魅力、バラエティパック、購入利便性(オンライン/店舗)、イベント/アウトドア関心ターゲティング(YDA/GDN/LINE)。ダイナミックなビジュアル。</p>
+                <div class="persona-card">
+                    <h4 class="text-xl font-semibold text-green-700">ペルソナ2：ソーシャルイベントエンハンサー（ケンジさん、24歳）</h4>
+                    <p class="text-sm text-gray-600 mb-2"><strong>デモグラフィック:</strong> 20代前半男性、学生/若手社会人、独身/交際中、都市部在住。</p>
+                    <p class="text-sm text-gray-600 mb-2"><strong>ニーズ:</strong> 集まり(BBQ等)の盛り上げ、記憶に残る体験、派手さ、楽しさ、手軽な購入/使用。</p>
+                    <p class="text-sm text-gray-600 mb-2"><strong>ペインポイント:</strong> 子供っぽさ回避、規制/場所不明、予算意識（インパクト重視）、購入不便。</p>
+                    <p class="text-sm text-gray-600 mb-2"><strong>情報源:</strong> SNS(Insta/TikTok)、友人推薦、検索(安い, 面白い, BBQ)、LINE、店舗/オンライン衝動買い。</p>
+                    <p class="text-sm text-gray-600"><strong>アプローチ:</strong> 視覚的魅力、バラエティパック、購入利便性(オンライン/店舗)、イベント/アウトドア関心ターゲティング(YDA/GDN/LINE)。ダイナミックなビジュアル。</p>
                 </div>
-                <div class="p-4 border rounded-lg bg-white">
-                    <h4 class="text-lg font-semibold text-purple-700 mb-2">ペルソナ3：コミュニティイベント主催者（サトウさん、52歳）</h4>
-                    <p><strong>デモグラフィック:</strong> 50代女性、自治体/PTA/地域団体勤務、イベント担当。</p>
-                    <p><strong>ニーズ:</strong> イベントの目玉、信頼性、プロ対応、予算/安全規制遵守、手間削減、良い体験提供。</p>
-                    <p><strong>ペインポイント:</strong> 限られた予算、許認可/規制複雑、信頼できる業者探し、物流調整。</p>
-                    <p><strong>情報源:</strong> 検索(業者, 費用, 地域イベント)、推薦、業界ディレクトリ、直接連絡(メール/電話)。</p>
-                    <p><strong>アプローチ:</strong> 専門知識、実績、プライベート花火、安全性/コンプライアンス強調。B2B重視キーワード、ジオターゲティング。事例紹介。</p>
+                <div class="persona-card">
+                    <h4 class="text-xl font-semibold text-purple-700">ペルソナ3：コミュニティイベント主催者（サトウさん、52歳）</h4>
+                    <p class="text-sm text-gray-600 mb-2"><strong>デモグラフィック:</strong> 50代女性、自治体/PTA/地域団体勤務、イベント担当。</p>
+                    <p class="text-sm text-gray-600 mb-2"><strong>ニーズ:</strong> イベントの目玉、信頼性、プロ対応、予算/安全規制遵守、手間削減、良い体験提供。</p>
+                    <p class="text-sm text-gray-600 mb-2"><strong>ペインポイント:</strong> 限られた予算、許認可/規制複雑、信頼できる業者探し、物流調整。</p>
+                    <p class="text-sm text-gray-600 mb-2"><strong>情報源:</strong> 検索(業者, 費用, 地域イベント)、推薦、業界ディレクトリ、直接連絡(メール/電話)。</p>
+                    <p class="text-sm text-gray-600"><strong>アプローチ:</strong> 専門知識、実績、プライベート花火、安全性/コンプライアンス強調。B2B重視キーワード、ジオターゲティング。事例紹介。</p>
                 </div>
-                 <p class="italic text-gray-600 mt-4">ペルソナ分析から、安全性と使用場所の情報は広範な層に重要であり、Hanabi-Naviアプリは普遍的なツールとして訴求すべきことが示唆される。</p>
+                 <p class="italic text-gray-500 mt-4 text-sm">ペルソナ分析から、安全性と使用場所の情報は広範な層に重要であり、Hanabi-Naviアプリは普遍的なツールとして訴求すべきことが示唆される。</p>
             </div>
 
              <div>
-                <h3 class="text-xl font-semibold text-gray-700 mb-3">2.3. ペルソナサマリーマトリクス</h3>
-                <div class="overflow-x-auto">
-                    <table class="min-w-full border border-gray-200 rounded-lg shadow">
-                        <thead class="bg-gray-100">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">2.3. ペルソナサマリーマトリクス</h3>
+                <div class="overflow-x-auto shadow border border-gray-200 rounded-lg">
+                    <table class="min-w-full text-sm">
+                        <thead class="bg-gray-50">
                             <tr>
-                                <th>ペルソナ</th>
-                                <th>主要デモグラフィック</th>
-                                <th>主要ニーズ・目標</th>
-                                <th>主要ペインポイント</th>
-                                <th>主な情報チャネル</th>
-                                <th>主要マーケティングレバー</th>
+                                <th class="p-3">ペルソナ</th>
+                                <th class="p-3">主要デモグラフィック</th>
+                                <th class="p-3">主要ニーズ・目標</th>
+                                <th class="p-3">主要ペインポイント</th>
+                                <th class="p-3">主な情報チャネル</th>
+                                <th class="p-3">主要マーケティングレバー</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="bg-white divide-y divide-gray-200">
                             <tr>
-                                <td class="font-semibold text-blue-700">カズミ (安全志向の親)</td>
-                                <td>30代後半女性、既婚、子あり、郊外</td>
-                                <td>安全で楽しい家族の思い出、使いやすさ、信頼品質</td>
-                                <td>事故心配、場所不明、後片付け</td>
-                                <td>育児ブログ/雑誌、口コミ、検索、LINE、オンラインストア、アプリ</td>
-                                <td>安全性強調、低煙/エコ、ファミリーセット、アプリ連携、利便性</td>
+                                <td class="p-3 font-semibold text-blue-700">カズミ (安全志向の親)</td>
+                                <td class="p-3">30代後半女性、既婚、子あり、郊外</td>
+                                <td class="p-3">安全で楽しい家族の思い出、使いやすさ、信頼品質</td>
+                                <td class="p-3">事故心配、場所不明、後片付け</td>
+                                <td class="p-3">育児ブログ/雑誌、口コミ、検索、LINE、オンラインストア、アプリ</td>
+                                <td class="p-3">安全性強調、低煙/エコ、ファミリーセット、アプリ連携、利便性</td>
                             </tr>
                             <tr>
-                                <td class="font-semibold text-green-700">ケンジ (イベントエンハンサー)</td>
-                                <td>20代前半男性、学生/若手、独身/交際中、都市部</td>
-                                <td>イベント盛り上げ、記憶に残る体験、見た目、手軽さ</td>
-                                <td>子供っぽさ回避、規制/場所不明、予算、購入不便</td>
-                                <td>SNS、友人推薦、検索、LINE、衝動買い(店舗/オンライン)</td>
-                                <td>視覚的魅力、グループパック、購入利便性、イベント訴求</td>
+                                <td class="p-3 font-semibold text-green-700">ケンジ (イベントエンハンサー)</td>
+                                <td class="p-3">20代前半男性、学生/若手、独身/交際中、都市部</td>
+                                <td class="p-3">イベント盛り上げ、記憶に残る体験、見た目、手軽さ</td>
+                                <td class="p-3">子供っぽさ回避、規制/場所不明、予算、購入不便</td>
+                                <td class="p-3">SNS、友人推薦、検索、LINE、衝動買い(店舗/オンライン)</td>
+                                <td class="p-3">視覚的魅力、グループパック、購入利便性、イベント訴求</td>
                             </tr>
                             <tr>
-                                <td class="font-semibold text-purple-700">サトウ (コミュニティ主催者)</td>
-                                <td>50代女性、自治体/PTA/団体、イベント担当</td>
-                                <td>信頼性、プロ対応、予算/安全遵守、成功、手間削減</td>
-                                <td>予算、許認可複雑、業者探し、物流</td>
-                                <td>検索(業者,費用)、推薦、ディレクトリ、直接連絡</td>
-                                <td>専門知識、実績、プライベート花火、安全性、信頼性、事例</td>
+                                <td class="p-3 font-semibold text-purple-700">サトウ (コミュニティ主催者)</td>
+                                <td class="p-3">50代女性、自治体/PTA/団体、イベント担当</td>
+                                <td class="p-3">信頼性、プロ対応、予算/安全遵守、成功、手間削減</td>
+                                <td class="p-3">予算、許認可複雑、業者探し、物流</td>
+                                <td class="p-3">検索(業者,費用)、推薦、ディレクトリ、直接連絡</td>
+                                <td class="p-3">専門知識、実績、プライベート花火、安全性、信頼性、事例</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                 <p class="text-sm text-gray-600 mt-2">このマトリクスは、各ペルソナに合わせたメッセージングとチャネル選択の最適化に役立ちます。</p>
+                 <p class="text-xs text-gray-500 mt-3">このマトリクスは、各ペルソナに合わせたメッセージングとチャネル選択の最適化に役立ちます。</p>
             </div>
         </section>
 
         <section id="strategy" class="section-card">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">3. デジタル広告戦略：プラットフォーム別ターゲティング</h2>
+             <h2 class="text-3xl font-bold text-gray-800 mb-8">
+                 <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" /></svg>
+                3. デジタル広告戦略：プラットフォーム別ターゲティング
+            </h2>
 
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-3">3.1. 戦略的アプローチ：獲得と認知の目標達成に向けて</h3>
-                <ul class="list-disc list-inside space-y-1 text-gray-700">
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">3.1. 戦略的アプローチ：獲得と認知の目標達成に向けて</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 text-base">
                     <li><strong>目標:</strong> 新規顧客獲得（EC誘導、プライベート花火問合せ）とブランド認知度向上（若松屋ブランド、「花火のチカラ」）。</li>
                     <li><strong>プラットフォーム役割:</strong>
-                        <ul class="list-circle list-inside ml-4">
+                        <ul class="list-circle list-inside ml-4 space-y-1 mt-1">
                             <li><strong>YDA/GDN:</strong> 広範リーチ(認知)とターゲット絞込(獲得)。視覚フォーマット活用。</li>
                             <li><strong>LINE:</strong> 高エンゲージメント、モバイル中心。プロモ、リマケ、アプリ促進。</li>
                         </ul>
@@ -325,91 +384,102 @@
                 </ul>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                <div class="p-4 border rounded-lg bg-white shadow-sm">
-                    <h4 class="text-lg font-semibold text-red-600 mb-2">3.2. YDA (Yahoo! JAPAN Ads) ターゲティング設計</h4>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
-                        <li><strong>目標:</strong> 認知(ブランドパネル等) & 獲得(EC/リード)。</li>
-                        <li><strong>デモグラ:</strong> ペルソナ別年齢/性別/子供有無。</li>
-                        <li><strong>興味関心:</strong> 家族/子育て、イベント、アウトドア等。</li>
-                        <li><strong>検索履歴:</strong> 「花火 通販」「プライベート花火 費用」等。</li>
-                        <li><strong>プレイスメント:</strong> 関連サイト/ニュース。</li>
-                        <li><strong>地域/半径:</strong> 全国/特定エリア/店舗・会場周辺(最小1km)。</li>
-                        <li><strong>オーディエンス:</strong> リタゲ、アプリユーザー、LINE友だち、類似。</li>
-                        <li class="font-semibold mt-1">特に半径指定は店舗誘導/地域イベントに有効。</li>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="p-4 border rounded-lg bg-gray-50 shadow-sm">
+                    <h4 class="text-lg font-semibold text-red-700 mb-3 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M17.778 11.048A7.5 7.5 0 106.95 2.222a.75.75 0 00.04 1.496A6 6 0 0111 8.956v.141a.75.75 0 001.15.626 5.974 5.974 0 015.628 1.325zM10 6a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 6z" clip-rule="evenodd" /><path d="M10 10.5a.75.75 0 01.75.75v3a.75.75 0 01-1.5 0v-3a.75.75 0 01.75-.75z" /></svg>
+                        YDA ターゲティング
+                    </h4>
+                    <ul class="list-disc list-inside space-y-1 text-xs text-gray-600 pl-2">
+                        <li><strong>目標:</strong> 認知 & 獲得</li>
+                        <li><strong>デモグラ:</strong> ペルソナ別設定</li>
+                        <li><strong>興味関心:</strong> 家族/子育て, イベント等</li>
+                        <li><strong>検索履歴:</strong> 「花火 通販」等</li>
+                        <li><strong>プレイスメント:</strong> 関連サイト</li>
+                        <li><strong>地域/半径:</strong> 全国/特定エリア/店舗周辺</li>
+                        <li><strong>オーディエンス:</strong> リタゲ, アプリ, LINE連携, 類似</li>
+                        <li class="font-medium mt-1 text-red-600">半径指定が地域連携に有効</li>
                     </ul>
                 </div>
-                <div class="p-4 border rounded-lg bg-white shadow-sm">
-                    <h4 class="text-lg font-semibold text-blue-600 mb-2">3.3. GDN (Google Display Network) ターゲティング設計</h4>
-                     <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
-                        <li><strong>目標:</strong> 認知 & 獲得。広範リーチ。</li>
-                        <li><strong>デモグラ:</strong> YDA同様 + 世帯収入。</li>
-                        <li><strong>オーディエンス:</strong> アフィニティ(家族重視等)、購買意向(玩具, イベント企画)、ライフイベント(結婚)、詳しいデモ(子の年齢)。</li>
-                        <li><strong>カスタムセグメント:</strong> 検索語句、競合サイト訪問者、関連アプリ利用者。</li>
-                        <li><strong>トピック:</strong> 家族、イベント、アウトドア等。</li>
-                        <li><strong>プレイスメント:</strong> 手動選択/除外。</li>
-                        <li><strong>データセグメント:</strong> リマケ、カスタマーマッチ、類似。</li>
-                        <li class="font-semibold mt-1">購買意向/ライフイベントはプライベート花火に有効。</li>
+                <div class="p-4 border rounded-lg bg-gray-50 shadow-sm">
+                     <h4 class="text-lg font-semibold text-blue-700 mb-3 flex items-center gap-2">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M6.5 3a.5.5 0 000 1h3a.5.5 0 000-1h-3zM13.5 3a.5.5 0 000 1h3a.5.5 0 000-1h-3z" /><path fill-rule="evenodd" d="M17 6H3a1 1 0 00-1 1v9a1 1 0 001 1h14a1 1 0 001-1V7a1 1 0 00-1-1zM4 8a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11A.5.5 0 014 8zm0 3a.5.5 0 01.5-.5h7a.5.5 0 010 1h-7A.5.5 0 014 11zm0 3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11A.5.5 0 014 14z" clip-rule="evenodd" /></svg>
+                         GDN ターゲティング
+                    </h4>
+                     <ul class="list-disc list-inside space-y-1 text-xs text-gray-600 pl-2">
+                        <li><strong>目標:</strong> 認知 & 獲得</li>
+                        <li><strong>デモグラ:</strong> YDA同様 + 世帯収入</li>
+                        <li><strong>オーディエンス:</strong> アフィニティ, 購買意向, ライフイベント</li>
+                        <li><strong>カスタムセグメント:</strong> 検索語句, 競合訪問</li>
+                        <li><strong>トピック:</strong> 家族, アウトドア等</li>
+                        <li><strong>データセグメント:</strong> リマケ, カスタマーマッチ, 類似</li>
+                        <li class="font-medium mt-1 text-blue-600">購買意向/ライフイベントが有効</li>
                     </ul>
                 </div>
-                <div class="p-4 border rounded-lg bg-white shadow-sm">
-                    <h4 class="text-lg font-semibold text-green-600 mb-2">3.4. LINE広告 ターゲティング設計</h4>
-                     <ul class="list-disc list-inside space-y-1 text-sm text-gray-600">
-                         <li><strong>目標:</strong> モバイル中心の認知/獲得、アプリインストール。</li>
-                         <li><strong>デモグラ:</strong> 年齢(5歳刻み)、性別、地域。</li>
-                         <li><strong>興味関心:</strong> ファミリー、エンタメ、イベント等 (+Yahoo!連携)。</li>
-                         <li><strong>行動/属性:</strong> 子供あり、OS、ウェブ行動等。</li>
-                         <li><strong>オーディエンス:</strong> リタゲ(サイト/アプリ)、LINE友だち、類似、カスタム(電話番号/メアド)。</li>
-                         <li><strong>配信面:</strong> NEWS, VOOM, マンガ, ウォレット等。</li>
-                         <li class="font-semibold mt-1">アプリインストール促進に強み。Hanabi-Naviに最適。</li>
+                <div class="p-4 border rounded-lg bg-gray-50 shadow-sm">
+                     <h4 class="text-lg font-semibold text-green-700 mb-3 flex items-center gap-2">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" /></svg>
+                         LINE広告 ターゲティング
+                    </h4>
+                     <ul class="list-disc list-inside space-y-1 text-xs text-gray-600 pl-2">
+                         <li><strong>目標:</strong> モバイル認知/獲得, アプリ促進</li>
+                         <li><strong>デモグラ:</strong> 年齢(5歳刻み), 性別, 地域</li>
+                         <li><strong>興味関心:</strong> ファミリー, エンタメ等</li>
+                         <li><strong>行動/属性:</strong> 子供あり, OS等</li>
+                         <li><strong>オーディエンス:</strong> リタゲ, LINE友だち, 類似, カスタム</li>
+                         <li><strong>配信面:</strong> NEWS, VOOM等</li>
+                         <li class="font-medium mt-1 text-green-600">アプリインストール促進に強み</li>
                     </ul>
                 </div>
             </div>
 
             <div>
-                 <h3 class="text-xl font-semibold text-gray-700 mb-3">3.5. クロスプラットフォーム ターゲティング概要</h3>
-                 <div class="overflow-x-auto">
-                    <table class="min-w-full border border-gray-200 rounded-lg shadow">
-                        <thead class="bg-gray-100">
+                 <h3 class="text-xl font-semibold text-gray-700 mb-4">3.5. クロスプラットフォーム ターゲティング概要</h3>
+                 <div class="overflow-x-auto shadow border border-gray-200 rounded-lg">
+                    <table class="min-w-full text-xs">
+                        <thead class="bg-gray-50">
                             <tr>
-                                <th>ペルソナ</th>
-                                <th>YDA ターゲティングハイライト</th>
-                                <th>GDN ターゲティングハイライト</th>
-                                <th>LINE広告 ターゲティングハイライト</th>
+                                <th class="p-2">ペルソナ</th>
+                                <th class="p-2">YDA ハイライト</th>
+                                <th class="p-2">GDN ハイライト</th>
+                                <th class="p-2">LINE広告 ハイライト</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="bg-white divide-y divide-gray-200">
                             <tr>
-                                <td class="font-semibold text-blue-700 align-top">カズミ (安全志向の親)</td>
-                                <td class="text-sm align-top">デモグラ(女性,30-49,子あり)、興味(家族)、検索(安全)、リタゲ</td>
-                                <td class="text-sm align-top">アフィニティ(家族重視)、購買意向(玩具)、詳しいデモ(子の年齢)、リマケ</td>
-                                <td class="text-sm align-top">デモグラ(女性,30-49)、興味(ファミリー)、属性(子あり)、類似、アプリリタゲ</td>
+                                <td class="p-2 font-semibold text-blue-700 align-top">カズミ (安全志向の親)</td>
+                                <td class="p-2 align-top">デモグラ(女性,30-49,子あり)、興味(家族)、検索(安全)、リタゲ</td>
+                                <td class="p-2 align-top">アフィニティ(家族重視)、購買意向(玩具)、詳しいデモ(子の年齢)、リマケ</td>
+                                <td class="p-2 align-top">デモグラ(女性,30-49)、興味(ファミリー)、属性(子あり)、類似、アプリリタゲ</td>
                             </tr>
                              <tr>
-                                <td class="font-semibold text-green-700 align-top">ケンジ (イベントエンハンサー)</td>
-                                <td class="text-sm align-top">デモグラ(18-29)、興味(イベント)、検索(BBQ)、プレイスメント</td>
-                                <td class="text-sm align-top">アフィニティ(アウトドア)、購買意向(旅行)、カスタム(競合訪問)</td>
-                                <td class="text-sm align-top">デモグラ(18-29)、興味(エンタメ)、配信面(VOOM)、類似</td>
+                                <td class="p-2 font-semibold text-green-700 align-top">ケンジ (イベントエンハンサー)</td>
+                                <td class="p-2 align-top">デモグラ(18-29)、興味(イベント)、検索(BBQ)、プレイスメント</td>
+                                <td class="p-2 align-top">アフィニティ(アウトドア)、購買意向(旅行)、カスタム(競合訪問)</td>
+                                <td class="p-2 align-top">デモグラ(18-29)、興味(エンタメ)、配信面(VOOM)、類似</td>
                             </tr>
                              <tr>
-                                <td class="font-semibold text-purple-700 align-top">サトウ (コミュニティ主催者)</td>
-                                <td class="text-sm align-top">デモグラ(40+)、検索(プライベート花火)、地域/半径、リタゲ</td>
-                                <td class="text-sm align-top">購買意向(イベント企画)、ライフイベント(結婚)、カスタム(検索語句)</td>
-                                <td class="text-sm align-top">デモグラ(40+)、オーディエンス(顧客リスト)、配信面(NEWS)</td>
+                                <td class="p-2 font-semibold text-purple-700 align-top">サトウ (コミュニティ主催者)</td>
+                                <td class="p-2 align-top">デモグラ(40+)、検索(プライベート花火)、地域/半径、リタゲ</td>
+                                <td class="p-2 align-top">購買意向(イベント企画)、ライフイベント(結婚)、カスタム(検索語句)</td>
+                                <td class="p-2 align-top">デモグラ(40+)、オーディエンス(顧客リスト)、配信面(NEWS)</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                 <p class="text-sm text-gray-600 mt-2">各プラットフォームの強みを活かし、ペルソナごとに一貫したアプローチを行います。</p>
+                 <p class="text-xs text-gray-500 mt-3">各プラットフォームの強みを活かし、ペルソナごとに一貫したアプローチを行います。</p>
             </div>
         </section>
 
-        <section id="recommendations" class="section-card border-l-blue-500">
-            <h2 class="text-2xl font-bold text-gray-800 mb-6">4. 戦略的提言と結論</h2>
+        <section id="recommendations" class="section-card">
+             <h2 class="text-3xl font-bold text-gray-800 mb-8">
+                 <svg class="section-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" /></svg>
+                4. 戦略的提言と結論
+            </h2>
 
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-700 mb-3">4.1. 成長に向けた統合アクションプラン</h3>
-                <ol class="list-decimal list-inside space-y-2 text-gray-700">
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">4.1. 成長に向けた統合アクションプラン</h3>
+                <ol class="list-decimal list-inside space-y-3 text-gray-700 text-base">
                     <li><strong>オンラインプレゼンス強化:</strong> オンラインショップのUX改善（検索、決済情報等）。BASE制約大なら移行検討。Hanabi-Naviアプリ露出強化。</li>
                     <li><strong>歴史と信頼性の活用:</strong> 長い歴史と安全性をブランドメッセージ/広告に組込み、特にファミリー層へ訴求。</li>
                     <li><strong>ペルソナ主導広告実行:</strong> YDA/GDN/LINEターゲティング戦略実行。ペルソナ別クリエイティブ/入札調整。継続的監視・最適化。</li>
@@ -420,18 +490,18 @@
             </div>
 
             <div>
-                <h3 class="text-xl font-semibold text-gray-700 mb-3">4.2. 結論：株式会社若松屋の今後の道筋</h3>
-                <p class="mb-4">株式会社若松屋は、豊かな歴史と専門知識という強固な基盤を持つ。オンラインチャネルの弱点に対処し、明確なペルソナに基づいたターゲット型デジタル広告戦略を実行することで、新規顧客獲得とブランド認知度向上を効果的に促進できる大きな可能性を秘めている。</p>
-                <p>特に、安全性への信頼、ユニークなプライベート花火サービス、そしてHanabi-Naviアプリといった独自の価値提案を戦略的に活用することが成功の鍵となる。変化の激しいデジタル市場においては、継続的なデータ分析に基づく最適化と、市場動向への迅速な適応が、持続的な成長を実現するために不可欠である。</p>
+                <h3 class="text-xl font-semibold text-gray-700 mb-4">4.2. 結論：株式会社若松屋の今後の道筋</h3>
+                <p class="mb-4 text-base">株式会社若松屋は、豊かな歴史と専門知識という強固な基盤を持つ。オンラインチャネルの弱点に対処し、明確なペルソナに基づいたターゲット型デジタル広告戦略を実行することで、新規顧客獲得とブランド認知度向上を効果的に促進できる大きな可能性を秘めている。</p>
+                <p class="text-base">特に、安全性への信頼、ユニークなプライベート花火サービス、そしてHanabi-Naviアプリといった独自の価値提案を戦略的に活用することが成功の鍵となる。変化の激しいデジタル市場においては、継続的なデータ分析に基づく最適化と、市場動向への迅速な適応が、持続的な成長を実現するために不可欠である。</p>
             </div>
         </section>
 
     </div>
 
-    <footer class="bg-gray-800 text-white mt-12 py-6">
+    <footer class="bg-gray-800 text-white mt-16 py-8">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
             &copy; 2025 株式会社若松屋 マーケティングレポート (非公開資料)
-            <p class="text-xs text-gray-400 mt-1">このページは検索エンジンにインデックスされません。</p>
+            <p class="text-xs text-gray-400 mt-2">このページは検索エンジンにインデックスされません。</p>
         </div>
     </footer>
 
@@ -452,7 +522,7 @@
         });
 
         // Close mobile menu when a link is clicked
-        const mobileLinks = menu.querySelectorAll('a');
+        const mobileLinks = menu.querySelectorAll('#mobile-menu a'); // Target links inside mobile menu specifically
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 // Check if the menu is open before trying to close it
